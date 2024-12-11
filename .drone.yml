@@ -11,9 +11,3 @@ steps:
 - name: greeting
   commands:
   - echo hello world
-
-#steps:
-#- name: ansible
-#  commands:
-#  - cd /home/ulf/Documents/git/bitwarden-backup
-#  - ansible-playbook -i inventories playbooks/bitwarden-backup.yml
