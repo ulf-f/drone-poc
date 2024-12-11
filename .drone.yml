@@ -11,3 +11,7 @@ steps:
 - name: greeting
   commands:
   - echo hello world
+
+trigger:
+  branch:
+  - master
