@@ -1,0 +1,15 @@
+---
+kind: pipeline
+type: ssh
+name: default
+
+server:
+  host: 10.191.77.20
+  user: ulf
+  password:
+    from_secret: rpi4-user
+
+steps:
+- name: greeting
+  commands:
+  - echo hello world
