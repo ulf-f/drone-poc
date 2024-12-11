@@ -10,9 +10,7 @@ server:
     from_secret: rpi4-user
 
 steps:
-- name: greeting
+- name: ansible
   commands:
-  - whoami
-  - pwd
-  - env
-  - ls -la
+  - cd /home/ulf/Documents/git/bitwarden-backup
+  - ansible-playbook -i inventories playbooks/bitwarden-backup.yml
