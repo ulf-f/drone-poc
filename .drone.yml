@@ -1,16 +1,19 @@
 ---
 kind: pipeline
-type: ssh
+type: exec
 name: default
 
-server:
-  host: 10.191.77.20
-  user: ulf
-  password:
-    from_secret: rpi4-user
+platform:
+  os: linux
+  arch: arm64 
 
 steps:
-- name: ansible
+- name: greeting
   commands:
-  - cd /home/ulf/Documents/git/bitwarden-backup
-  - ansible-playbook -i inventories playbooks/bitwarden-backup.yml
+  - echo hello world
+
+#steps:
+#- name: ansible
+#  commands:
+#  - cd /home/ulf/Documents/git/bitwarden-backup
+#  - ansible-playbook -i inventories playbooks/bitwarden-backup.yml
